@@ -1,0 +1,210 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Martha's Personal Portfolio</title>
+<link href="styleportfolio.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Martha Taukuheke</h1>
+<nav>
+<a href="about.html">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<button id="themebtn">Change Theme</button>
+</nav>
+</header>
+
+
+<div class="profile section">
+<img src="img/marthaT.jpg" alt="Martha's profile picture"/>
+<div>
+<h2>Web developer & Educator</h2>
+
+
+<p class="dotted-card">Hello — I build clean, accessible websites and teach programming in simple steps. I focus on HTML, CSS, JavaScript, and Django.</p>
+<p>Based in Windhoek, Namibia. I do freelancing projects to help fund my education.</p>
+</div>
+</div>
+
+
+<section id="about" class="section">
+<h3>About me</h3>
+<p>I love creating clear, helpful tutorials and small web apps that solve real problems. I enjoy explaining ideas simply and teaching others to become confident builders.</p>
+<p id="rotatingMsg" class="muted-text"></p>
+</section>
+
+
+<section id="projects" class="section">
+<h3>Selected projects</h3>
+
+<div class="projects">
+<div class="project-card">
+<h4>Auto Biography website</h4>
+<img src="img/Screenshot1.png" class="screenshots" alt="Auto Biography">
+
+<p>Auto Biography portfolio website.</p>
+
+<button class="projectBtn">View Info</button>
+<p class="projectMsg"></p>
+
+<a href="https://codepen.io/martha-taukuheke/pen/JojgyVr">View project</a>
+</div>
+
+<div class="project-card">
+<h4>Product Landing Page</h4>
+<img src="img/Screenshot2.png" class="screenshots" alt="Product Landing Page">
+<p>Product Landing Page for Marketing High value products</p>
+
+<button class="projectBtn">View Info</button>
+<p class="projectMsg"></p>
+
+<a href="https://codepen.io/martha-taukuheke/pen/YPPYaGX">View project</a>
+</div>
+</div>
+</section>
+
+<section id="contactemail">
+  <h2>Contact Me</h2>
+
+  <input type="email" id="emailInput" placeholder="Enter your email" />
+
+   <textarea
+    id="messageInput"
+    placeholder="Type your message here..."
+    rows="4"
+  ></textarea>
+  
+  <button id="sendBtn" type="button">Send</button>
+
+  <p id="feedbackMsg"></p>
+</section>
+
+
+
+<section id="contact" class="section">
+<h3>Contact</h3>
+<p>Phone: 0817856800</p>
+<p>Email: <a href="mailto:marthataukuheke@gmail.com">marthataukuheke@gmail.com</a></p>
+</section>
+
+
+<footer>
+  <p>© 2025 Martha</p>
+</footer>
+</div>
+
+<script>
+//THEME CHANGE SECTION
+
+const themes={
+light:{ bg: "#fbfeff",
+        text: "#1a1f24"
+      },
+dark:{bg: "#1a1f24",
+    text: "#fbfeff"
+     }
+};
+
+let isDark = false;
+
+document.getElementById("themebtn").onclick = () => {
+  if (!isDark) {
+    document.body.style.backgroundColor = "#1a1f24"; // dark page bg
+    isDark = true;
+  } else {
+    document.body.style.backgroundColor = "#f0f7ff"; // original light bg
+    isDark = false;
+  }
+};
+
+
+
+//projects buttons for giving more infor(the use of spread, forEach and index to use the current element in the loop )
+
+const messages = [
+  "Built with HTML & CSS",
+  "Responsive layout",
+  "Beginner-friendly project"
+];
+
+document.querySelectorAll(".projectBtn").forEach((btn, index) => {
+  btn.onclick = () => {
+    const allMessages = [...messages]; // spread operator
+    document.querySelectorAll(".projectMsg")[index].textContent =
+      allMessages.join(" • ");
+  };
+});
+
+// regex practical on email entered and Feedback
+
+
+const emailInput = document.getElementById("emailInput");
+const sendBtn = document.getElementById("sendBtn");
+const feedbackMsg = document.getElementById("feedbackMsg");
+const messageInput = document.getElementById("messageInput");
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+
+sendBtn.addEventListener("click", () => {
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+
+  if (email === "" || message === "") {
+    feedbackMsg.textContent = "Please fill in both email and message.";
+    feedbackMsg.className = "error";
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    feedbackMsg.textContent = "Please enter a valid email address.";
+    feedbackMsg.className = "error";
+    return;
+  }
+
+  feedbackMsg.textContent = "Thank you! Your message has been sent.";
+  feedbackMsg.className = "success";
+
+  emailInput.value = "";
+  messageInput.value = "";
+});
+
+
+
+//ROTATING MESSAGE
+
+const rotatingMessages = [
+  "*Helping brands and individuals stand out online*",
+  "*Delivering simple, effective web solutions*",
+  "*Web development with a strong focus on usability*",
+  "*From idea to deployment — clean and reliable*",
+  "*Open to freelance and collaboration opportunities*"
+];
+
+
+let currentIndex = 0;
+const messageParg = document.getElementById("rotatingMsg");
+
+
+
+function rotateMessage(){
+  messageParg.textContent = rotatingMessages[currentIndex];
+  currentIndex++;
+
+  if(currentIndex === rotatingMessages.length){
+    currentIndex = 0;
+  }
+}
+rotateMessage();
+setInterval(rotateMessage, 3000);
+
+</script>
+</body>
+</html>
