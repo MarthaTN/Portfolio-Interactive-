@@ -125,12 +125,12 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 }
 
 #emailInput{
- width: 100%;
+ width: 50%;
  padding: 10px;
  margin-bottom: 10px;
 }
 #messageInput {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   margin-bottom: 10px;
   resize: vertical;
@@ -145,6 +145,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
