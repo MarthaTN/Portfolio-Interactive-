@@ -99,7 +99,17 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 .hidden {
   display: none;
 }
-
+ .projectBtn {
+  display: inline-block;      /* shrink to text size */
+  padding: 6px 12px;          /* smaller padding */
+  margin: 8px 0;              /* space from content */
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
 /* For Responsive (screens)*/
 @media (max-width:560px){
@@ -137,16 +147,19 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   margin-bottom: 10px;
   resize: vertical;
 }
-#sendBtn, .projectBtn{
-  width: auto;
+#sendBtn {
+  display: inline-block;
   padding: 10px 20px;
-  cursor: pointer;
-  border: none;
   border-radius: 6px;
   background-color: var(--accent);
-  color: #fbfeff;
+  color: #fff;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+#sendBtn:hover {
+  background-color: #0a5956;
 }
 
 #feedbackMsg{
@@ -154,6 +167,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
