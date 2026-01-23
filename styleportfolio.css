@@ -134,8 +134,15 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   resize: vertical;
 }
 #sendBtn{
+  width: 15px;
   padding: 10px 20px;
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: #fbfeff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #feedbackMsg{
@@ -143,6 +150,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
