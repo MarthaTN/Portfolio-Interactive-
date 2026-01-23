@@ -49,7 +49,7 @@
 <p>Auto Biography portfolio website.</p>
 
 <button class="projectBtn">View Info</button>
-<p class="projectMsg"></p>
+<p class="projectMsg hidden"></p>
 
 <a href="https://codepen.io/martha-taukuheke/pen/JojgyVr">View project</a>
 </div>
@@ -60,7 +60,7 @@
 <p>Product Landing Page for Marketing High value products</p>
 
 <button class="projectBtn">View Info</button>
-<p class="projectMsg"></p>
+<p class="projectMsg hidden"></p>
 
 <a href="https://codepen.io/martha-taukuheke/pen/YPPYaGX">View project</a>
 </div>
@@ -133,11 +133,21 @@ const messages = [
 
 document.querySelectorAll(".projectBtn").forEach((btn, index) => {
   btn.onclick = () => {
-    const allMessages = [...messages]; // spread operator
-    document.querySelectorAll(".projectMsg")[index].textContent =
-      allMessages.join(" • ");
+    const msgBox = document.querySelectorAll(".projectMsg")[index];
+
+    // Toggle visibility
+    msgBox.classList.toggle("hidden");
+
+    // If now visible → fill text
+    if (!msgBox.classList.contains("hidden")) {
+      msgBox.textContent = messages.join(" • ");
+      btn.textContent = "Hide Info";
+    } else {
+      btn.textContent = "View Info";
+    }
   };
 });
+
 
 // regex practical on email entered and Feedback
 
@@ -209,5 +219,6 @@ setInterval(rotateMessage, 3000);
 </body>
 
 </html>
+
 
 
