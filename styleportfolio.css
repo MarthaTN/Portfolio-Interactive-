@@ -113,6 +113,16 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   text-decoration: underline;
   text-underline-offset: 6px;;
 }
+
+/* form filling section */
+
+.sectionform{
+max-width:920px
+padding:12px 8px;
+margin-bottom:12px;
+border-radius:8px;
+background:  #f2f4f5;
+}
 #contactemail{
   max-width: 400px;
   margin: 40 px;
@@ -139,4 +149,5 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 #feedbackMsg{
   margin-top: 10px;
   font-size: 14px;
+
 }
