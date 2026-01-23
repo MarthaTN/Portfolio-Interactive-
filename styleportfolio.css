@@ -99,7 +99,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 .hidden {
   display: none;
 }
- .projectBtn {
+.project-card .projectBtn {
   display: inline-block;      /* shrink to text size */
   padding: 6px 12px;          /* smaller padding */
   margin: 8px 0;              /* space from content */
@@ -110,7 +110,6 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 /* For Responsive (screens)*/
 @media (max-width:560px){
 .profile{flex-direction:column; align-items:flex-start}
@@ -167,6 +166,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
