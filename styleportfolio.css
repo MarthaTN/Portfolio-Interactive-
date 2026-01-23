@@ -137,8 +137,8 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   margin-bottom: 10px;
   resize: vertical;
 }
-#sendBtn{
-  width: 15px;
+#sendBtn, .projectBtn{
+  width: auto;
   padding: 10px 20px;
   cursor: pointer;
   border: none;
@@ -154,6 +154,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
