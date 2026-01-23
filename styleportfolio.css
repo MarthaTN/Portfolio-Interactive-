@@ -124,13 +124,6 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   background: #f2f4f5;
 }
 
-#contactemail{
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-
 #emailInput{
  width: 100%;
  padding: 10px;
@@ -152,5 +145,6 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
