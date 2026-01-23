@@ -117,7 +117,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 /* form filling section */
 
 .sectionform{
-max-width:920px
+max-width:920px;
 padding:12px 8px;
 margin-bottom:12px;
 border-radius:8px;
@@ -151,3 +151,4 @@ background:  #f2f4f5;
   font-size: 14px;
 
 }
+
