@@ -114,7 +114,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 .wrapBtnMsg{
   width: 260px; 
   margin: 40px auto;
-  text-align: center;
+  text-align: left;
 }
 .projectMsg {
   margin: 0;
@@ -183,6 +183,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
