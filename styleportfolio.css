@@ -114,6 +114,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 
 .to-center{
   text-align: center;
+  display: block;
 }
 
 .wrapBtnMsg{
@@ -188,6 +189,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
