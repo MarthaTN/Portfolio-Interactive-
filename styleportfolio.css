@@ -102,19 +102,20 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
 .project-card .projectBtn {
   display: block;      
   padding: 6px 12px;          
-  margin: 8px 0;              
+  margin: 8px auto;              
   border: none;
   border-radius: 6px;
   background-color: var(--accent);
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
+  
 }
 
 .wrapBtnMsg{
   width: 260px; 
   margin: 40px auto;
-  text-align: left;
+  text-align: center;
 }
 .projectMsg {
   margin: 0;
@@ -183,6 +184,7 @@ footer{margin-top:18px; font-size:0.9rem; color:var(--muted)}
   font-size: 14px;
 
 }
+
 
 
 
